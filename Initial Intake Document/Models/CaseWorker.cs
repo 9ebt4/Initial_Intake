@@ -7,11 +7,11 @@ public partial class CaseWorker
 {
     public int CaseWorkerId { get; set; }
 
-    public string FirstName { get; set; } = null!;
-
-    public string LastName { get; set; } = null!;
+    public int PersonId { get; set; }
 
     public virtual ICollection<ContactInfo> ContactInfos { get; set; } = new List<ContactInfo>();
 
     public virtual ICollection<Patron> Patrons { get; set; } = new List<Patron>();
+
+    public virtual Person Person { get; set; } = null!;
 }

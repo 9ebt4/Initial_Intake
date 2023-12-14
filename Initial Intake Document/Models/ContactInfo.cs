@@ -13,11 +13,11 @@ public partial class ContactInfo
 
     public int? CaseWorkerId { get; set; }
 
-    public int? UserId { get; set; }
-
     public int? CategoryId { get; set; }
 
     public string? Details { get; set; }
+
+    public int? UserId { get; set; }
 
     public virtual CaseWorker? CaseWorker { get; set; }
 

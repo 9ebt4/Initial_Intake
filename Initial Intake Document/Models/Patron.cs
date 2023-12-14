@@ -7,10 +7,6 @@ public partial class Patron
 {
     public int PatronId { get; set; }
 
-    public string FirstName { get; set; } = null!;
-
-    public string LastName { get; set; } = null!;
-
     public DateTime DateOfBirth { get; set; }
 
     public int? CaseWorkerId { get; set; }
@@ -19,9 +15,15 @@ public partial class Patron
 
     public int? AssignedBedId { get; set; }
 
-    public bool? HasWorkPass { get; set; }
+    public DateTime? LastCheckIn { get; set; }
+
+    public int? WorkPassId { get; set; }
+
+    public int PersonId { get; set; }
 
     public virtual Bed? AssignedBed { get; set; }
+
+    public virtual ICollection<BanDetail> BanDetails { get; set; } = new List<BanDetail>();
 
     public virtual CaseWorker? CaseWorker { get; set; }
 
@@ -33,5 +35,9 @@ public partial class Patron
 
     public virtual ICollection<MedicalCondition> MedicalConditions { get; set; } = new List<MedicalCondition>();
 
+    public virtual Person Person { get; set; } = null!;
+
     public virtual ICollection<ResourcesNeeded> ResourcesNeededs { get; set; } = new List<ResourcesNeeded>();
+
+    public virtual WorkPass? WorkPass { get; set; }
 }

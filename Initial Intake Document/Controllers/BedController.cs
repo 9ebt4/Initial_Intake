@@ -14,5 +14,18 @@ namespace Initial_Intake_Document.Controllers
         {
             return db.Beds.ToList();
         }
+        //[HttpPatch]
+        //public Bed ChangeBed(Patron? patron, Bed bed) 
+        //{
+        //    Bed modifiedBed = db.Beds.Where(b => b.BedId == bed.BedId).FirstOrDefault();
+        //    modifiedBed.Patrons.Clear();
+        //    if(patron != null)
+        //    {
+        //        modifiedBed.Patrons.Add(patron);
+        //    }
+        //    db.Beds.Update(modifiedBed);
+        //    db.SaveChanges();
+        //    return modifiedBed;
+        //}
     }
 }

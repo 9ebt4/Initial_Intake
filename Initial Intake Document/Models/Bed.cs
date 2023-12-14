@@ -9,7 +9,5 @@ public partial class Bed
 
     public string BedName { get; set; } = null!;
 
-    public bool? CheckedIn { get; set; }
-
     public virtual ICollection<Patron> Patrons { get; set; } = new List<Patron>();
 }
